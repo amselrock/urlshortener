@@ -1,5 +1,5 @@
-# urlshortener
-Url shortener using Asp.Net MVC, Asp.Net Web Api, AngularJs, Sql Server 2014
+# Url shortener
+Url shortener like [google] using Asp.Net MVC, Asp.Net Web Api, AngularJs, Sql Server 2014
 
 ### Installation
 1- Run Sql scripts:
@@ -14,3 +14,5 @@ Url shortener using Asp.Net MVC, Asp.Net Web Api, AngularJs, Sql Server 2014
 
 ### Version
 1.0.0
+
+[google]: <https://goo.gl>
