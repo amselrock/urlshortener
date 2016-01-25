@@ -18,5 +18,5 @@ Live [Demo] on Azure
 ### Version
 1.0.0
 
-[google]: <https://goo.gl>
+[goo.gl]: <https://goo.gl>
 [Demo]: <http://rmshorturl.azurewebsites.net>
