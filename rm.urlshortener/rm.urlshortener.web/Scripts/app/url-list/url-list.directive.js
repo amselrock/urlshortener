@@ -30,6 +30,7 @@
 		activate();
 
 		function activate() {
+			vm.siteRootUrl = siteRootUrl;
 			vm.urls = appService.getUrls();
 
 			vm.errorMessage = '';

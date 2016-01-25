@@ -13,7 +13,7 @@
 				<tr data-ng-repeat="item in vm.urls.items track by item.id">
 					<td>
 						<a href="{{::('s/' + item.shortUrl)}}" target="_blank">
-							{{::item.shortUrl}}
+							{{::(vm.siteRootUrl + item.shortUrl)}}
 						</a>
 					</td>
 					<td>
