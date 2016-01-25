@@ -1,0 +1,11 @@
+﻿
+@{
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<header class="page-header">
+	<h1><span class="glyphicon glyphicon-stats"></span>&nbsp;Statistics</h1>
+</header>
+<section>
+	<a href="@Url.Action("")" class="btn btn-default pull-right"><span class="glyphicon glyphicon-menu-left"></span>&nbsp;Back</a>
+	<url-statistics url-code="@ViewContext.RouteData.Values["shortUrl"].ToString()"></url-statistics>
+</section>

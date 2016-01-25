@@ -1,0 +1,25 @@
+﻿<div class="row">
+	<div class="col-md-12">
+		<!-- Url properties -->
+		<a href="{{(vm.root + 's/' + vm.url.shortUrl)}}" target="_blank">
+			<h2>{{(vm.root + 's/' + vm.url.shortUrl)}}</h2>
+		</a>
+		<p>
+			Long URL:&nbsp;<strong>{{::vm.url.longUrl}}</strong><br />
+			Creation date:&nbsp;<strong>{{::vm.url.creationDate | date: 'dd/MM/yyyy'}}</strong>
+		</p>
+		<div class="top-spacer15">
+			<div class="alert alert-warning" data-ng-hide="vm.chart.data[0].length > 0 ||  vm.chart.data.length <= 0">
+				No data found
+			</div>
+			<!-- Clicks -->
+			<div class="alert alert-info col-lg-2 col-md-2 col-sm-4 col-xs-6" data-ng-show="vm.chart.data[0].length > 0">
+				Total clicks:&nbsp;{{::vm.stats.totalCount}}
+			</div>
+			<!-- chart -->
+			<canvas id="line" data-ng-show="vm.chart.data[0].length > 0"
+					class="chart chart-line" chart-data="vm.chart.data" chart-labels="vm.chart.labels"
+					chart-options="vm.chart.options" chart-legend="true" chart-series="vm.chart.series"></canvas>
+		</div>
+	</div>
+</div>

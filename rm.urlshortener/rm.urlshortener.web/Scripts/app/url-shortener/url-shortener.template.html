@@ -1,0 +1,35 @@
+﻿<form name="urlShortenerForm" data-ng-submit="urlShortenerForm.$valid && vm.submitUrl()"
+	  novalidate>
+	<div class="form-group"
+		 data-ng-class="{'has-success': urlShortenerForm.longUrlInputText.$valid && (vm.submitted || urlShortenerForm.longUrlInputText.$touched),
+								 'has-error':  urlShortenerForm.longUrlInputText.$invalid && (vm.submitted || urlShortenerForm.longUrlInputText.$touched)}">
+		<label class="control-label" for="longUrlInputText">Paste your long URL here</label>
+		<input type="url" name="longUrlInputText" data-ng-model="vm.longUrl" class="form-control" placeholder="Paste your long URL here..." required />
+		<div data-ng-messages="urlShortenerForm.longUrlInputText.$error" data-ng-if="vm.submitted || urlShortenerForm.longUrlInputText.$touched">
+			<div data-ng-message="required">
+				<span class="text-danger">
+					Mandatory field
+				</span>
+			</div>
+			<div data-ng-message="url">
+				<span class="text-danger">
+					Invalid URL format
+				</span>
+			</div>
+		</div>
+	</div>
+	<button name="submitButton" class="btn btn-primary" data-ng-click="vm.submitted = true">Submit url</button>
+	<br />
+	<br />
+	<div class="alert alert-danger" data-ng-show="vm.errorMessage !== ''">
+		{{vm.errorMessage}}
+	</div>
+	<div class="alert alert-success" data-ng-show="vm.successMessage !== ''">
+		{{vm.successMessage}}
+	</div>
+	<!--<pre>
+				urlShortenerForm.longUrlInputText.$invalid: {{urlShortenerForm.longUrlInputText.$invalid}}<br />
+				vm.submitted: {{vm.submitted}}<br />
+				urlShortenerForm.longUrlInputText.$touched: {{urlShortenerForm.longUrlInputText.$touched}}
+	</pre>-->
+</form>

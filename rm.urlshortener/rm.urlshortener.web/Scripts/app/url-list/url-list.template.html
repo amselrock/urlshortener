@@ -1,0 +1,44 @@
+﻿<div class="row">
+	<div class="col-md-12">
+		<table class="table table-striped" data-ng-if="vm.urls.items.length > 0">
+			<thead>
+				<tr>
+					<th>Short URL</th>
+					<th>Created</th>
+					<th>Long URL</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-ng-repeat="item in vm.urls.items track by item.id">
+					<td>
+						<a href="{{::('s/' + item.shortUrl)}}" target="_blank">
+							{{::item.shortUrl}}
+						</a>
+					</td>
+					<td>
+						{{::item.creationDate | date: 'dd/MM/yyyy'}}
+					</td>
+					<td>
+						{{::item.longUrl}}
+					</td>
+					<td>
+						<a href="{{::('s/' + item.shortUrl + '/stats')}}" class="btn btn-primary">
+							<span class="glyphicon glyphicon-stats"></span>
+						</a>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="4">
+						<strong>
+							Found {{vm.urls.items.length}} URLs
+						</strong>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</div>
+
