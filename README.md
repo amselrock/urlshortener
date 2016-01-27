@@ -1,6 +1,9 @@
 # Url shortener
 Url shortener like [goo.gl] using Asp.Net MVC, Asp.Net Web Api, AngularJs, Sql Server 2014
 
+### TODO
+Pagination of url list
+
 ### Installation
 1- Run Sql scripts:
 * 01_CrateDB.sql (change the DB installation path if needed.)
